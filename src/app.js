@@ -13,12 +13,13 @@ let when = [
   "during my lunch"
 ];
 
+let cantidad = [who.length, action.length, what.length, when.length];
 let excusa = [];
 let cambio = document.querySelector("#excusa");
 
 window.onload = function() {
   for (let i = 0; i <= 3; i++) {
-    excusa.push(Math.floor(Math.random() * 4));
+    excusa.push(Math.floor(Math.random() * cantidad[i]));
   }
   cambio.innerHTML = `${who[excusa[0]]} ${action[excusa[1]]} ${
     what[excusa[2]]
